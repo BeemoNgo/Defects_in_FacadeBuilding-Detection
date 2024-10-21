@@ -25,3 +25,22 @@ You can install all dependencies using the following command:
 
 ```bash
 pip install -r requirements.txt
+
+## Model Selection
+
+The app provides an option to choose between several object detection models:
+
+- **Faster R-CNN**: A powerful, region-based convolutional neural network for object detection.
+- **YOLOv10/YOLOv11**: YOLO models are fast, real-time object detection models with different size configurations (Small, Medium, Large).
+
+## How to Use
+
+- **Upload Image**: You can upload an image in JPG, PNG, or JPEG format.
+- **Select a Model**: Choose a model for object detection (YOLOv10, YOLOv11, or Faster R-CNN).
+- **View Results**: The app will display the uploaded image with bounding boxes drawn around detected objects.
+
+## Example Workflow
+
+1. **Upload Image**: You can upload an image in JPG, PNG, or JPEG format.
+2. **Select a Model**: Choose a model for object detection (YOLOv10, YOLOv11, or Faster R-CNN).
+3. **View Results**: The app will process and display the results with bounding boxes and confidence scores.
