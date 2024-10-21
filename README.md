@@ -10,22 +10,6 @@ This project is an object detection application built using **Streamlit**, **PyT
 - Displays detected objects with bounding boxes and labels, along with confidence scores.
 - Responsive and easy-to-use web interface powered by Streamlit.
 
-## Prerequisites
-
-Ensure you have the following installed:
-
-- Python 3.8+
-- Streamlit
-- PyTorch
-- Ultralytics YOLO
-- OpenCV
-- Torchvision
-
-You can install all dependencies using the following command:
-
-```bash
-pip install -r requirements.txt
-
 ## Model Selection
 
 The app provides an option to choose between several object detection models:
@@ -44,3 +28,19 @@ The app provides an option to choose between several object detection models:
 1. **Upload Image**: You can upload an image in JPG, PNG, or JPEG format.
 2. **Select a Model**: Choose a model for object detection (YOLOv10, YOLOv11, or Faster R-CNN).
 3. **View Results**: The app will process and display the results with bounding boxes and confidence scores.
+
+## Prerequisites
+
+Ensure you have the following installed:
+
+- Python 3.8+
+- Streamlit
+- PyTorch
+- Ultralytics YOLO
+- OpenCV
+- Torchvision
+
+You can install all dependencies using the following command:
+
+```bash
+pip install -r requirements.txt
