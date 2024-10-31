@@ -81,7 +81,7 @@ def detect_yolo(model, image):
     results = model(image)
     return results
 
-# List of class names for your dataset
+# List of class names for dataset
 classes = ["corrosion", "paint_defect", "crack", "dirt_mold", "delamination"]
 # Streamlit UI
 st.title("Object Detection App")
