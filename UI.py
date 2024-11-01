@@ -14,7 +14,7 @@ def load_faster_rcnn_model():
     num_classes = 5  # Update the number of classes to 5
     model.roi_heads.box_predictor = models.detection.faster_rcnn.FastRCNNPredictor(in_features, num_classes)
     state_dict = torch.load("./Model/faster_rcnn.pth", map_location=torch.device('cpu'))
-    
+
     # Load the state dict (ignoring predictor layers if needed)
     state_dict = {k: v for k, v in state_dict.items() if not (
         k.startswith('roi_heads.box_predictor.cls_score') or k.startswith('roi_heads.box_predictor.bbox_pred')
@@ -48,7 +48,7 @@ def detect_faster_rcnn(model, image, classes, device):
         transforms.Resize((600, 600)),  # Resize but no normalization
         transforms.ToTensor(),  # Convert image to tensor
     ])
-    
+
     # Transform the image to a tensor and move to the correct device
     image_tensor = transform(image).to(device).unsqueeze(0)
 
@@ -67,9 +67,9 @@ def detect_faster_rcnn(model, image, classes, device):
 
     # Draw bounding boxes with the corresponding labels
     result_image = draw_bounding_boxes(
-        img_int, 
-        boxes=boxes, 
-        labels=labels_with_scores, 
+        img_int,
+        boxes=boxes,
+        labels=labels_with_scores,
         width=4
     )
 
